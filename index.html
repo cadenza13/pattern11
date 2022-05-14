@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢字クイズ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="start">
+    <img src="img/LOGO.png" alt="">
+
+    <p id="startBtn">GAME START</p>
+
+    <div class="rule">
+      <p>クイズのルール</p>
+      <ul>
+        <li>・漢字の読み仮名を答えるクイズです。</li>
+        <li>・10問やって最終的に得点が表示されます。</li>
+        <li>・得点表</li>
+        <li>ヒントを開かずに正解 + 10点<br>ヒントを開いて正解 + 5点<br>パスをする + 1点<br>不正解 0点</li>
+        <li>・全角ひらがなで回答してください。</li>
+        <li>・ヒントの内容は独断と偏見です。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="result" class="hidden">
+    <h1>結果発表</h1>
+  
+    <ul>
+    </ul>
+  
+    <h2 id="resultTotal"></h2>
+  
+    <a href="index.html" id="titleBtn">タイトルに戻る</a>
+  </div>
+
+  <div id="mask" class="hidden">
+    <span id="correct" class="hidden"></span>
+    <div id="incorrect" class="hidden">
+      <span></span>
+      <span></span>
+    </div>
+
+    <img src="img/true.png" alt="" width="200" height="300">
+  </div>
+
+  <main class="container hidden">
+    <div class="quiz">
+      <ul>
+      </ul>
+      <h1></h1>
+    </div>
+
+    <div class="hint">
+      <dt>ヒント</dt>
+      <dd class="hidden"></dd>
+    </div>
+
+    <div class="answer">
+      <input type="text">
+      <a href="#" id="answerBtn">回答</a>
+    </div>
+
+    <footer>
+      <a href="#" id="passBtn">パス</a>
+      <div class="number">
+        <p id="current">1</p>
+        <span></span>
+        <p id="total">10</p>
+      </div>
+    </footer>   
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
